@@ -30,6 +30,10 @@ PODCASTURL  = 'http://www.spreaker.com/show/1757189/episodes/feed'
 
 params = {}
 
+def check_autoPlay():
+    if (ADDON.getSetting('PLAY')=='true'):
+        playStream()    
+
 def playStream():
     # music item
     pl = xbmc.PlayList(xbmc.PLAYLIST_MUSIC)
@@ -143,3 +147,4 @@ def init():
         setAction(int(params['action']))
     else:
         createMenu()
+        check_autoPlay()
