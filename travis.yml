@@ -1,0 +1,24 @@
+language: python
+python: "3.6"
+install: echo "Install test dependencies"
+script: echo "Run tests"
+before_deploy:
+  - pip install git+https://github.com/bdommel/plugin.audio.pureradio
+  - submit-addon -z plugin.audio.pureradio
+  - export RELEASE_ZIP=$(ls *.zip)
+deploy:
+  # Publish an installable ZIP to GitHub Releases
+  - provider: releases
+    api_key: $GH_TOKEN
+    file_glob: true
+    file: $RELEASE_ZIP
+    skip_cleanup: true
+    on:
+      tags: true
+  # Submit to the official Kodi repo
+  - provider: script
+    script: submit-addon -r repo-plugins -b maxtrix --pull-request [plugin.audio.pureradio] 2.0.0
+    on:
+      tags: true
+notifications:
+  email: false
