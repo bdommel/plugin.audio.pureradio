@@ -12,7 +12,7 @@ class Plugin():
         self.pluginparams = sys.argv[2]
         self.plugin_id = plugin_id
         self.plugin_type = 'Audio' if 'audio' in plugin_id else 'Music'
-        self.debug_enable = True # The debug logs are disabled by default.
+        self.debug_enable = False # The debug logs are disabled by default.
         # addon functions
         self.plugin_settings = xbmcaddon.Addon(id=self.plugin_id)
         self.translation = self.plugin_settings.getLocalizedString

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.audio.pureradio" name="Pureradio.One" version="3.0.0+matrix.0" provider-name="Bart van Dommelen">
+<addon id="plugin.audio.pureradio" name="Pureradio.One" version="3.0.2+matrix.0" provider-name="Bart van Dommelen">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0"/>
 	</requires>
@@ -20,9 +20,18 @@
             <fanart>resources/fanart.jpg</fanart>
 		</assets>
 		<news>
-			Version 2.0.0 (01-OCT-2020) 
-				[*] Support for Kodi 19 Matrix.
-				[*] Spreaker podcast section updated, much faster and optional artwork.
+			Version 2.0.0 (01-OCT-2020)
+				[*] Python3 used for matrix			
+				[*] Spreaker podcast section optimalisation
+			Version 3.0.0 (01-NOV-2020) 
+				[*] Rewrite based on current Kodi guidelines
+				[*] Removed screenshots
+			Version 3.0.1 (02-NOV-2020)
+				[*] Removed static strings from API
+				[*] Dynamic Streaming and podcast urls
+				[*] Replaced eval function for static function calls
+			Version 3.0.2 (04-NOV-2020)
+				[*] Commit to matrix branch
 		</news>
 	</extension>
 </addon>
