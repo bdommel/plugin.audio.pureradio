@@ -31,7 +31,11 @@
 				[*] Dynamic Streaming and podcast urls
 				[*] Replaced eval function for static function calls
 			Version 3.0.2 (04-NOV-2020)
+				[*] update to matrix branch
+			Version 3.0.3 (06-OCT-2021)
 				[*] Commit to matrix branch
+			Version 3.0.2 (13-OCT-2021)
+				[*] retrieve stream and podcast url from settings file
 		</news>
 	</extension>
 </addon>
